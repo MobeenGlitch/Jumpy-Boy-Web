@@ -123,5 +123,18 @@
       document.body.appendChild(script);
 
     </script>
+
+    <script>
+  	window.addEventListener("load", function () {
+    	const urlParams = new URLSearchParams(window.location.search);
+	const code = urlParams.get("code");
+
+    	if (code) 
+	{
+      	console.log("🔐 Sending OAuth code to Unity:", code);
+	SendMessage("WhopApi", "ReceiveCodeFromWeb", code);
+    	}
+	});
+    </script>
   </body>
 </html>
