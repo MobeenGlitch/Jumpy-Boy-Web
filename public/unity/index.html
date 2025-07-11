@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/JumpyBoy-WebGl.loader.js";
+      var loaderUrl = buildUrl + "/JumpyBoy-WebGL.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/JumpyBoy-WebGl.data",
-        frameworkUrl: buildUrl + "/JumpyBoy-WebGl.framework.js",
-        codeUrl: buildUrl + "/JumpyBoy-WebGl.wasm",
+        dataUrl: buildUrl + "/JumpyBoy-WebGL.data",
+        frameworkUrl: buildUrl + "/JumpyBoy-WebGL.framework.js",
+        codeUrl: buildUrl + "/JumpyBoy-WebGL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "BooKoo Arcade",
         productName: "Jumpy Boy",
@@ -122,19 +122,6 @@
 
       document.body.appendChild(script);
 
-    </script>
-
-    <script>
-  	window.addEventListener("load", function () {
-    	const urlParams = new URLSearchParams(window.location.search);
-	const code = urlParams.get("code");
-
-    	if (code) 
-	{
-      	console.log("🔐 Sending OAuth code to Unity:", code);
-	SendMessage("WhopApi", "ReceiveCodeFromWeb", code);
-    	}
-	});
     </script>
   </body>
 </html>
